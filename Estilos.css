@@ -7,6 +7,11 @@
     width: 950px;
     font-family: Arial, Helvetica;
 }
+.barra{
+	background-color: deepskyblue;
+	border-left: 6px solid deepskyblue;
+	padding: 6px;
+}
 main{
     width: 950px;
     height: 40px;
@@ -30,34 +35,20 @@ header nav ul li a{
 header nav ul li a:hover{
     color: white;
 }
-section{
-    float: left;
-    width: 950px;
-    height: 510px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    background-color: white;
-}
-aside{
-    margin-top: 5px;
-    float: left;
-    width: 195px;
-    height: 300px;
-    margin-left: 5px;
-    background-color: white;
-}
-aside:nth-of-type(1){
-    height: 50px;
-}
-footer{
+#pie{
     clear: both;
     width: 950px;
-    height: 50px;
+    height: 40px;
     background-color: #333;
     text-align: center;
     color: white;
     line-height: 50px;
     font-style: italic;
+}
+#principal{
+    text-align: justify;
+    float: left;
+    width: 100%;
 }
 
 body {
@@ -147,10 +138,4 @@ h1 {
 	padding: 5px;
 	border-radius: 50%;
 	line-height: 25px;
-}
-
-/*Margenes*/
-Margen{
-    margin-right: 50%;
-    margin-left: 80%;
 }
