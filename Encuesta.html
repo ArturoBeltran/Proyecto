@@ -1,0 +1,93 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./EstiloIQ.css">
+    <script type="text/javaScript">
+        var Puntos=0;
+        //Pregunta1.- Nombre y edad
+        var ValorNombre1=15;
+        var ValorNombre2=20;
+        var ValorNombre3=30;
+        var ValorNombre4=10;
+        //Pregunta2.- Nacimiento
+        var ValorNacimiento1=30;
+        var ValorNacimiento2=15;
+        var ValorNacimiento3=10;
+        var ValorNacimiento4=20;
+        //Pregunta3.- Origen padres
+        var ValorOrigen1=30;
+        var ValorOrigen2=10;
+        var ValorOrigen3=20;
+        var ValorOrigen4=15;
+        //Pregunta4.- Hermanos
+        var ValorHermanos1=30;
+        var ValorHermanos2=10;
+        var ValorHermanos3=15;
+        var ValorHermanos4=20;
+        //Pregunta5.- Escuelas
+        var ValorEscuela1=15;
+        var ValorEscuela2=10;
+        var ValorEscuela3=30;
+        var ValorEscuela4=20;
+        //Pregunta6.- Fractura
+        var ValorEscuela1=20;
+        var ValorEscuela2=10;
+        var ValorEscuela3=30;
+        var ValorEscuela4=15;
+        
+        function Result(){
+            //Pregunta1.- Nombre y edad
+            var Nombredad1=document.getElementById("NE1").checked;
+            var Nombredad2=document.getElementById("NE2").checked;
+            var Nombredad3=document.getElementById("NE3").checked;
+            var Nombredad4=document.getElementById("NE4").checked;
+            
+            if(Nombredad1==true){ iq=iq+ValorNombre1; }
+            if(Nombredad2==true){ iq=iq+ValorNombre2; }
+            if(Nombredad3==true){ iq=iq+ValorNombre3; }
+            if(Nombredad4==true){ iq=iq+ValorNombre4; }
+            
+            //Pregunta2.- Nacimiento
+            var Nacimiento1=document.getElementById("NE1").checked;
+            var Nacimiento2=document.getElementById("NE2").checked;
+            var Nacimiento3=document.getElementById("NE3").checked;
+            var Nacimiento4=document.getElementById("NE4").checked;
+            
+            if(Nacimiento1==true){ iq=iq+ValorNacimiento1; }
+            if(Nacimiento2==true){ iq=iq+ValorNacimiento2; }
+            if(Nacimiento3==true){ iq=iq+ValorNacimiento3; }
+            if(Nacimiento4==true){ iq=iq+ValorNacimiento4; }
+            
+            //Resultados
+            if(iq>0){ alert("Tu coeficiente intelectual es: "+iq); }
+            else{ alert("Tu coeficiente intelectual es: 0") }
+            location.reload(true);
+        }
+    </script>
+</head>
+    
+<body>
+    <div class="wrap">
+        <form action="" class="formulario">
+            <div class="radio">
+                <h1 align="center">Determinaci&#243;n de Coeficiente Intelectual</h1><br>
+                <h2>&#191;Cual es mi nombre completo y edad&#63;</h2>
+                <input type="radio" id="NE1" name="m1"checked><label for="NE1">Gastelúm Castro Luis, 23 años</label>
+                <input type="radio" id="NE2" name="m1"><label for="NE2">Orduño Beltrán Juan Arturo, 25 años</label>  
+                <input type="radio" id="NE3" name="m1"><label for="NE3">Beltrán Calderón Luis Arturo, 20 años</label>
+                <input type="radio" id="NE4" name="m1"><label for="NE4">Chairez Calderón Diego, 18 años</label>
+            </div>
+            
+            <div class="radio">
+                <h2>&#191;Cual es mi fecha de nacimiento&#63;</h2>
+                <input type="radio" id="NAC1" name="m1"checked><label for="NAC1">7 de Julio de 1996</label>
+                <input type="radio" id="NAC2" name="m1"><label for="NAC2">10 de Diciembre de 1994</label>  
+                <input type="radio" id="NAC3" name="m1"><label for="NAC3">28 de Agosto de 1995</label>
+                <input type="radio" id="NAC4" name="m1"><label for="NAC4">10 de Junio de 1998</label>
+            </div>
+            <br><input type="button" value="Resultado" onclick="Result()">
+        </form>
+    </div>
+</body>
+</html>
