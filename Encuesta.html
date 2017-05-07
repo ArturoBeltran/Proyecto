@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./EstiloIQ.css">
     <script type="text/javaScript">
-        var Puntos=0;
+        var iq=0;
         //Pregunta1.- Nombre y edad
         var ValorNombre1=15;
         var ValorNombre2=20;
@@ -21,9 +21,9 @@
         var ValorOrigen3=20;
         var ValorOrigen4=15;
         //Pregunta4.- Hermanos
-        var ValorHermanos1=30;
+        var ValorHermanos1=15;
         var ValorHermanos2=10;
-        var ValorHermanos3=15;
+        var ValorHermanos3=30;
         var ValorHermanos4=20;
         //Pregunta5.- Escuelas
         var ValorEscuela1=15;
@@ -31,10 +31,10 @@
         var ValorEscuela3=30;
         var ValorEscuela4=20;
         //Pregunta6.- Fractura
-        var ValorEscuela1=20;
-        var ValorEscuela2=10;
-        var ValorEscuela3=30;
-        var ValorEscuela4=15;
+        var ValorFractura1=20;
+        var ValorFractura2=10;
+        var ValorFractura3=30;
+        var ValorFractura4=15;
         
         function Result(){
             //Pregunta1.- Nombre y edad
@@ -49,18 +49,62 @@
             if(Nombredad4==true){ iq=iq+ValorNombre4; }
             
             //Pregunta2.- Nacimiento
-            var Nacimiento1=document.getElementById("NE1").checked;
-            var Nacimiento2=document.getElementById("NE2").checked;
-            var Nacimiento3=document.getElementById("NE3").checked;
-            var Nacimiento4=document.getElementById("NE4").checked;
+            var Nacimiento1=document.getElementById("NAC1").checked;
+            var Nacimiento2=document.getElementById("NAC2").checked;
+            var Nacimiento3=document.getElementById("NAC3").checked;
+            var Nacimiento4=document.getElementById("NAC4").checked;
             
             if(Nacimiento1==true){ iq=iq+ValorNacimiento1; }
             if(Nacimiento2==true){ iq=iq+ValorNacimiento2; }
             if(Nacimiento3==true){ iq=iq+ValorNacimiento3; }
             if(Nacimiento4==true){ iq=iq+ValorNacimiento4; }
             
+            //Pregunta3.- Origen padres
+            var Origin1=document.getElementById("ORG1").checked;
+            var Origin2=document.getElementById("ORG2").checked;
+            var Origin3=document.getElementById("ORG3").checked;
+            var Origin4=document.getElementById("ORG4").checked;
+            
+            if(Origin1==true){ iq=iq+ValorOrigen1; }
+            if(Origin2==true){ iq=iq+ValorOrigen2; }
+            if(Origin3==true){ iq=iq+ValorOrigen3; }
+            if(Origin4==true){ iq=iq+ValorOrigen4; }
+            
+            //Pregunta4.- Hermanos
+            var Brothers1=document.getElementById("BRO1").checked;
+            var Brothers2=document.getElementById("BRO2").checked;
+            var Brothers3=document.getElementById("BRO3").checked;
+            var Brothers4=document.getElementById("BRO4").checked;
+            
+            if(Brothers1==true){ iq=iq+ValorHermanos1; }
+            if(Brothers2==true){ iq=iq+ValorHermanos2; }
+            if(Brothers3==true){ iq=iq+ValorHermanos3; }
+            if(Brothers4==true){ iq=iq+ValorHermanos4; }
+            
+            //Pregunta5.- Escuelas
+            var School1=document.getElementById("SCH1").checked;
+            var School2=document.getElementById("SCH2").checked;
+            var School3=document.getElementById("SCH3").checked;
+            var School4=document.getElementById("SCH4").checked;
+            
+            if(School1==true){ iq=iq+ValorEscuela1; }
+            if(School2==true){ iq=iq+ValorEscuela2; }
+            if(School3==true){ iq=iq+ValorEscuela3; }
+            if(School4==true){ iq=iq+ValorEscuela4; }
+            
+            //Pregunta6.- Fractura
+            var Fract1=document.getElementById("FRC1").checked;
+            var Fract2=document.getElementById("FRC2").checked;
+            var Fract3=document.getElementById("FRC3").checked;
+            var Fract4=document.getElementById("FRC4").checked;
+            
+            if(Fract1==true){ iq=iq+ValorFractura1; }
+            if(Fract2==true){ iq=iq+ValorFractura2; }
+            if(Fract3==true){ iq=iq+ValorFractura3; }
+            if(Fract4==true){ iq=iq+ValorFractura4; }
+            
             //Resultados
-            if(iq>0){ alert("Tu coeficiente intelectual es: "+iq); }
+            if(iq>0){ alert("Obtuviste un puntaje de: "+iq+" puntos"); }
             else{ alert("Tu coeficiente intelectual es: 0") }
             location.reload(true);
         }
@@ -71,20 +115,52 @@
     <div class="wrap">
         <form action="" class="formulario">
             <div class="radio">
-                <h1 align="center">Determinaci&#243;n de Coeficiente Intelectual</h1><br>
+                <h1 align="center">Encuesta</h1><br>
                 <h2>&#191;Cual es mi nombre completo y edad&#63;</h2>
-                <input type="radio" id="NE1" name="m1"checked><label for="NE1">Gastelúm Castro Luis, 23 años</label>
-                <input type="radio" id="NE2" name="m1"><label for="NE2">Orduño Beltrán Juan Arturo, 25 años</label>  
-                <input type="radio" id="NE3" name="m1"><label for="NE3">Beltrán Calderón Luis Arturo, 20 años</label>
+                <input type="radio" id="NE1" name="m1"checked><label for="NE1">Gastelúm Castro Luis, 23 años</label><br>
+                <input type="radio" id="NE2" name="m1"><label for="NE2">Orduño Beltrán Juan Arturo, 25 años</label><br>  
+                <input type="radio" id="NE3" name="m1"><label for="NE3">Beltrán Calderón Luis Arturo, 20 años</label><br>
                 <input type="radio" id="NE4" name="m1"><label for="NE4">Chairez Calderón Diego, 18 años</label>
             </div>
             
             <div class="radio">
                 <h2>&#191;Cual es mi fecha de nacimiento&#63;</h2>
-                <input type="radio" id="NAC1" name="m1"checked><label for="NAC1">7 de Julio de 1996</label>
-                <input type="radio" id="NAC2" name="m1"><label for="NAC2">10 de Diciembre de 1994</label>  
-                <input type="radio" id="NAC3" name="m1"><label for="NAC3">28 de Agosto de 1995</label>
-                <input type="radio" id="NAC4" name="m1"><label for="NAC4">10 de Junio de 1998</label>
+                <input type="radio" id="NAC1" name="m2"checked><label for="NAC1">7 de Julio de 1996</label>
+                <input type="radio" id="NAC2" name="m2"><label for="NAC2">10 de Diciembre de 1994</label>
+                <input type="radio" id="NAC3" name="m2"><label for="NAC3">28 de Agosto de 1995</label>
+                <input type="radio" id="NAC4" name="m2"><label for="NAC4">10 de Junio de 1998</label>
+            </div>
+            
+            <div class="radio">
+                <h2>&#191;De dónde son originarios mis padres&#63;</h2>
+                <input type="radio" id="ORG1" name="m3"checked><label for="ORG1">Los Mochis y Juan Jose Rios</label>
+                <input type="radio" id="ORG2" name="m3"><label for="ORG2">Hermosilo y Culiacan</label>
+                <input type="radio" id="ORG3" name="m3"><label for="ORG3">Juan Jose Rios y Hermosillo</label>
+                <input type="radio" id="ORG4" name="m3"><label for="ORG4">Mazatlan y Los Mochis</label>
+            </div>
+            
+            <div class="radio">
+                <h2>&#191;Cuantos hermanos tengo&#63;</h2>
+                <input type="radio" id="BRO1" name="m4"checked><label for="BRO1">3 Hermanos</label>
+                <input type="radio" id="BRO2" name="m4"><label for="BRO2">Ninguno</label>  
+                <input type="radio" id="BRO3" name="m4"><label for="BRO3">2 Hermanos</label>
+                <input type="radio" id="BRO4" name="m4"><label for="BRO4">5 Hermanos</label>
+            </div>
+            
+            <div class="radio">
+                <h2>&#191;A qué escuelas asistí en el kínder, primaria, secundaria y preparatoria&#63;</h2>
+                <input type="radio" id="SCH1" name="m5"checked><label for="SCH1">Colegio Josefa Otríz de Domínguez, ETI 2, IMA</label><br>
+                <input type="radio" id="SCH2" name="m5"><label for="SCH2">Jardín de niños Justo Sierra, Colegio Mochis, CETis 68</label><br>  
+                <input type="radio" id="SCH3" name="m5"><label for="SCH3">Jardín de niños Rosaura Zapata, Colegio Nueva Senda, CBTis43</label><br>
+                <input type="radio" id="SCH4" name="m5"><label for="SCH4">Jardín de niños Solecitos, Prof. Marical Ordoñez, Colegio Topolobampo</label>
+            </div>
+            
+            <div class="radio">
+                <h2>&#191;Qué parte del cuerpo me fracturé cuando cursaba kídner&#63;</h2>
+                <input type="radio" id="FRC1" name="m6"checked><label for="FRC1">Pierna izquierda</label>
+                <input type="radio" id="FRC2" name="m6"><label for="FRC2">Pierna derecha</label>  
+                <input type="radio" id="FRC3" name="m6"><label for="FRC3">Brazo izquierdo</label>
+                <input type="radio" id="FRC4" name="m6"><label for="FRC4">Brazo derecho</label>
             </div>
             <br><input type="button" value="Resultado" onclick="Result()">
         </form>
